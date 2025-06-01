@@ -6,8 +6,9 @@ import EmojiSticker from "@/components/EmojiSticker";
 import IconButton from "@/components/IconButton";
 import ImageViewer from "@/components/ImageViewer";
 import * as ImagePicker from "expo-image-picker";
-import { useState } from "react";
+import React, { useState } from "react";
 import { ImageSourcePropType, StyleSheet, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const PlaceholderImage = require("@/assets/images/background-image.png");
 
@@ -52,7 +53,7 @@ export default function Index() {
   };
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} selectedImg={selectedImage} />
         {pickedEmoji && (
@@ -87,7 +88,7 @@ export default function Index() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onCloseModal={onModalClose} onSelect={setPickedEmoji} />
       </EmojiPicker>
-    </View>
+    </GestureHandlerRootView>
   );
 }
 
