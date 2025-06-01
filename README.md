@@ -69,3 +69,8 @@ Before starting, make sure you have installed:
 - `npm run ios` - Run the app on iOS
 - `npm run web` - Run the app in web browser
 - `npm run reset-project` - Reset project removing example code
+
+## Screenshots
+![editao_screenshots](https://github.com/user-attachments/assets/c7f1b15c-8cdf-4a5b-8c6a-a12c6853a11f)
+
+
